@@ -46,7 +46,7 @@ class Editor extends Component {
 
   * This is a list item
 
-  > Blockquote
+>Blockquote
 
   ![Markdown logo](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
