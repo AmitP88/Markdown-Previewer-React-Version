@@ -29,28 +29,28 @@ class Editor extends Component {
     });
 
   const defaultMarkdown = 
-  `# This is an h1
+`# This is an h1
 
-  ## This is an h2
+## This is an h2
 
-  [MSN](https://www.msn.com/)
+[MSN](https://www.msn.com/)
 
-  You inline code like this: \`<div></div>\`, between 2 backticks
+You inline code like this: \`<div></div>\`, between 2 backticks
 
-  This is a code block using 3 backticks:
-  \`\`\`
-  # code block
-  print '3 backticks or'
-  print 'indent 4 spaces'
-  \`\`\`
+This is a code block using 3 backticks:
+\`\`\`
+# code block
+print '3 backticks or'
+print 'indent 4 spaces'
+\`\`\`
 
-  * This is a list item
+* This is a list item
 
 >Blockquote
 
-  ![Markdown logo](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Markdown logo](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-  This is **bold text**
+This is **bold text**
   `;
 
     this.state = {
