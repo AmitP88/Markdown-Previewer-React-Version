@@ -16,20 +16,41 @@ class Editor extends Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
 
+    const renderer = new marked.Renderer();
+    renderer.link = function(href, title, text) {
+      const link = marked.Renderer.prototype.link.call(this, href, title, text);
+      return link.replace("<a","<a target='_blank' ");
+    };
+
+    marked.setOptions({
+      breaks: true,
+      renderer: renderer,
+      sanitize: true
+    });
+
   const defaultMarkdown = 
   `# This is an h1
+
   ## This is an h2
+
   [MSN](https://www.msn.com/)
-  1. This is a numbered list item
-  ![Markdown logo](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-  This is **bold text**
-  >This is a block quote
-  You inline a piece of code like this: \`<div></div>\`, between 2 backticks
+
+  You inline code like this: \`<div></div>\`, between 2 backticks
+
   This is a code block using 3 backticks:
   \`\`\`
-  var s = "JavaScript syntax highlighting";
-  alert(s);
+  # code block
+  print '3 backticks or'
+  print 'indent 4 spaces'
   \`\`\`
+
+  * This is a list item
+
+  > Blockquote
+
+  ![Markdown logo](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+  This is **bold text**
   `;
 
     this.state = {
@@ -47,7 +68,7 @@ class Editor extends Component {
     return (
       <div className="container">
         <div className="input">
-          <textarea name="editor" id="editor" cols="30" rows="10" placeholder="Type in text you want to render as HTML" onChange={this.handleChange}>{this.state.value}</textarea>      
+          <textarea name="editor" id="editor" cols="30" rows="10" placeholder="Type in text you want to render as HTML" onChange={this.handleChange} defaultValue={this.state.value}></textarea>      
         </div>
         <div className="output">
           <TextArea value={marked(this.state.value,{sanitize: true})} />      
