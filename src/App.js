@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './media_queries.css';
 import 'font-awesome/css/font-awesome.min.css';
 import marked from 'marked';
 
