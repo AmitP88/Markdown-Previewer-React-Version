@@ -47,10 +47,15 @@ footer {
 }
 
 .fa-github:hover {
-  color: rgb(85, 26, 139);
+  color: lightgreen;
 }
 
 .github-profile-link {
   text-decoration-line: none;
   font-weight: bold;
+  color: darkorchid;
+}
+
+.github-profile-link:hover {
+  color: lightgreen;
 }
