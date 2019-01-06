@@ -5,3 +5,7 @@ This is a fun simple app that enables you to write HTML markup using plain text,
 
 ![screenshot](https://github.com/AmitP88/Markdown-Previewer-React-Version/blob/master/MarkdownPreviewer.png)
 
+To use the app, just open https://markdown-previewer-react-v.herokuapp.com/ in your browser.
+(Or you can download this repo, navigate to the project folder using your terminal, and run `npm install` to install the dependencies. Then, just run `npm start` and enjoy!
+
+Have fun! :)
